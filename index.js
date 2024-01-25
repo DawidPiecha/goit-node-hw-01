@@ -24,12 +24,21 @@ async function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
     case "list":
       const contactsList = await listContacts();
-      console.log(
-        "\n" +
-          "This is the table of all available contacts:".toUpperCase().america +
-          "\n"
-      );
-      console.table(contactsList);
+      if (contactsList.length === 0) {
+        console.log(
+          "\n" +
+            "Sorry. There're no contacts available in database.".yellow +
+            "\n"
+        );
+      } else {
+        console.log(
+          "\n" +
+            "This is the table of all available contacts:".toUpperCase()
+              .america +
+            "\n"
+        );
+        console.table(contactsList);
+      }
       break;
 
     case "get":
