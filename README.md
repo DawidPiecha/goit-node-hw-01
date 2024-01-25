@@ -1,4 +1,4 @@
-Task results:
+<h1 style="color: blue; font-size: 30px; text-align: center;">Task results:</h1>
 
 # Otrzymujemy i wyprowadzamy całą listę kontaktów w postaci tabeli (console.table)
 
